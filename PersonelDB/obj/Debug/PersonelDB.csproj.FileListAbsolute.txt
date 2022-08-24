@@ -1,0 +1,11 @@
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\bin\Debug\PersonelDB.exe.config
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\bin\Debug\PersonelDB.exe
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\bin\Debug\PersonelDB.pdb
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\obj\Debug\PersonelDB.csproj.AssemblyReference.cache
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\obj\Debug\PersonelDB.csproj.SuggestedBindingRedirects.cache
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\obj\Debug\PersonelDB.Form1.resources
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\obj\Debug\PersonelDB.Properties.Resources.resources
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\obj\Debug\PersonelDB.csproj.GenerateResource.cache
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\obj\Debug\PersonelDB.csproj.CoreCompileInputs.cache
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\obj\Debug\PersonelDB.exe
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\obj\Debug\PersonelDB.pdb
