@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RehberDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Kisi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adı" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Soyadı" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="İkinci Ad" Type="nchar" MaxLength="30" />
+    <Property Name="Şehir" Type="int" Nullable="false" />
+    <Property Name="Telefon" Type="char" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sehir">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Şehir" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Kisi_Sehir">
+    <End Role="Sehir" Type="Self.Sehir" Multiplicity="1" />
+    <End Role="Kisi" Type="Self.Kisi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sehir">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kisi">
+        <PropertyRef Name="Şehir" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RehberDBModelStoreContainer">
+    <EntitySet Name="Kisi" EntityType="Self.Kisi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sehir" EntityType="Self.Sehir" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Kisi_Sehir" Association="Self.FK_Kisi_Sehir">
+      <End Role="Sehir" EntitySet="Sehir" />
+      <End Role="Kisi" EntitySet="Kisi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

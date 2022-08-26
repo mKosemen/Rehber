@@ -9,3 +9,8 @@ C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel D
 C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\obj\Debug\PersonelDB.csproj.CoreCompileInputs.cache
 C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\obj\Debug\PersonelDB.exe
 C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\obj\Debug\PersonelDB.pdb
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\bin\Debug\EntityFramework.dll
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\bin\Debug\EntityFramework.xml
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\casper\Desktop\BilgeAdamEğitim\03_Kendi Çalışmalarım\11_Personel DB\PersonelDB\PersonelDB\obj\Debug\PersonelDB.csproj.CopyComplete

@@ -47,11 +47,14 @@
             this.btnAra = new System.Windows.Forms.Button();
             this.txtATelefon = new System.Windows.Forms.TextBox();
             this.txtASoyad = new System.Windows.Forms.TextBox();
-            this.txtAAra = new System.Windows.Forms.TextBox();
+            this.txtAAd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabGuncelle = new System.Windows.Forms.TabPage();
+            this.btnGetir = new System.Windows.Forms.Button();
+            this.txtİkinciAd = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.cbxSil = new System.Windows.Forms.CheckBox();
             this.txtGSehir = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -65,18 +68,13 @@
             this.label13 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.btnGüncelle = new System.Windows.Forms.Button();
-            this.lswData = new System.Windows.Forms.ListView();
-            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Ad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Soyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Şehir = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnYenile = new System.Windows.Forms.Button();
-            this.btnData = new System.Windows.Forms.Button();
+            this.dgvData = new System.Windows.Forms.DataGridView();
             this.tabRehber.SuspendLayout();
             this.tabEkle.SuspendLayout();
             this.tabAra.SuspendLayout();
             this.tabGuncelle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
             // tabRehber
@@ -132,12 +130,13 @@
             // 
             this.btnEkle.BackColor = System.Drawing.Color.IndianRed;
             this.btnEkle.ForeColor = System.Drawing.Color.Black;
-            this.btnEkle.Location = new System.Drawing.Point(94, 252);
+            this.btnEkle.Location = new System.Drawing.Point(81, 280);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(87, 41);
             this.btnEkle.TabIndex = 15;
             this.btnEkle.Text = "EKLE";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // txtESehir
             // 
@@ -200,7 +199,7 @@
             this.tabAra.Controls.Add(this.btnAra);
             this.tabAra.Controls.Add(this.txtATelefon);
             this.tabAra.Controls.Add(this.txtASoyad);
-            this.tabAra.Controls.Add(this.txtAAra);
+            this.tabAra.Controls.Add(this.txtAAd);
             this.tabAra.Controls.Add(this.label4);
             this.tabAra.Controls.Add(this.label5);
             this.tabAra.Controls.Add(this.label6);
@@ -255,6 +254,7 @@
             this.btnAra.TabIndex = 24;
             this.btnAra.Text = "ARA";
             this.btnAra.UseVisualStyleBackColor = false;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // txtATelefon
             // 
@@ -270,12 +270,12 @@
             this.txtASoyad.Size = new System.Drawing.Size(147, 20);
             this.txtASoyad.TabIndex = 21;
             // 
-            // txtAAra
+            // txtAAd
             // 
-            this.txtAAra.Location = new System.Drawing.Point(85, 65);
-            this.txtAAra.Name = "txtAAra";
-            this.txtAAra.Size = new System.Drawing.Size(147, 20);
-            this.txtAAra.TabIndex = 20;
+            this.txtAAd.Location = new System.Drawing.Point(85, 65);
+            this.txtAAd.Name = "txtAAd";
+            this.txtAAd.Size = new System.Drawing.Size(147, 20);
+            this.txtAAd.TabIndex = 20;
             // 
             // label4
             // 
@@ -310,6 +310,9 @@
             // tabGuncelle
             // 
             this.tabGuncelle.BackColor = System.Drawing.Color.LightPink;
+            this.tabGuncelle.Controls.Add(this.btnGetir);
+            this.tabGuncelle.Controls.Add(this.txtİkinciAd);
+            this.tabGuncelle.Controls.Add(this.label14);
             this.tabGuncelle.Controls.Add(this.cbxSil);
             this.tabGuncelle.Controls.Add(this.txtGSehir);
             this.tabGuncelle.Controls.Add(this.label7);
@@ -329,10 +332,39 @@
             this.tabGuncelle.TabIndex = 2;
             this.tabGuncelle.Text = "Güncelleme";
             // 
+            // btnGetir
+            // 
+            this.btnGetir.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnGetir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGetir.Location = new System.Drawing.Point(19, 258);
+            this.btnGetir.Name = "btnGetir";
+            this.btnGetir.Size = new System.Drawing.Size(89, 44);
+            this.btnGetir.TabIndex = 42;
+            this.btnGetir.Text = "GETİR";
+            this.btnGetir.UseVisualStyleBackColor = false;
+            this.btnGetir.Click += new System.EventHandler(this.btnGetir_Click);
+            // 
+            // txtİkinciAd
+            // 
+            this.txtİkinciAd.Location = new System.Drawing.Point(82, 93);
+            this.txtİkinciAd.Name = "txtİkinciAd";
+            this.txtİkinciAd.Size = new System.Drawing.Size(147, 20);
+            this.txtİkinciAd.TabIndex = 41;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label14.Location = new System.Drawing.Point(16, 96);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(70, 16);
+            this.label14.TabIndex = 40;
+            this.label14.Text = "İkinci Ad:";
+            // 
             // cbxSil
             // 
             this.cbxSil.AutoSize = true;
-            this.cbxSil.Location = new System.Drawing.Point(122, 197);
+            this.cbxSil.Location = new System.Drawing.Point(122, 226);
             this.cbxSil.Name = "cbxSil";
             this.cbxSil.Size = new System.Drawing.Size(66, 17);
             this.cbxSil.TabIndex = 39;
@@ -342,7 +374,7 @@
             // 
             // txtGSehir
             // 
-            this.txtGSehir.Location = new System.Drawing.Point(82, 136);
+            this.txtGSehir.Location = new System.Drawing.Point(82, 166);
             this.txtGSehir.Name = "txtGSehir";
             this.txtGSehir.Size = new System.Drawing.Size(147, 20);
             this.txtGSehir.TabIndex = 38;
@@ -351,7 +383,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(16, 139);
+            this.label7.Location = new System.Drawing.Point(16, 169);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 16);
             this.label7.TabIndex = 37;
@@ -376,14 +408,14 @@
             // 
             // txtGTelefon
             // 
-            this.txtGTelefon.Location = new System.Drawing.Point(82, 171);
+            this.txtGTelefon.Location = new System.Drawing.Point(82, 201);
             this.txtGTelefon.Name = "txtGTelefon";
             this.txtGTelefon.Size = new System.Drawing.Size(147, 20);
             this.txtGTelefon.TabIndex = 34;
             // 
             // txtGSoyad
             // 
-            this.txtGSoyad.Location = new System.Drawing.Point(82, 98);
+            this.txtGSoyad.Location = new System.Drawing.Point(82, 128);
             this.txtGSoyad.Name = "txtGSoyad";
             this.txtGSoyad.Size = new System.Drawing.Size(147, 20);
             this.txtGSoyad.TabIndex = 33;
@@ -399,7 +431,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(16, 174);
+            this.label9.Location = new System.Drawing.Point(16, 204);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 16);
             this.label9.TabIndex = 31;
@@ -409,7 +441,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(16, 101);
+            this.label12.Location = new System.Drawing.Point(16, 131);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 16);
             this.label12.TabIndex = 30;
@@ -438,78 +470,33 @@
             // 
             this.btnGüncelle.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnGüncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGüncelle.Location = new System.Drawing.Point(82, 252);
+            this.btnGüncelle.Location = new System.Drawing.Point(140, 258);
             this.btnGüncelle.Name = "btnGüncelle";
             this.btnGüncelle.Size = new System.Drawing.Size(89, 44);
             this.btnGüncelle.TabIndex = 23;
             this.btnGüncelle.Text = "GÜNCELLE";
             this.btnGüncelle.UseVisualStyleBackColor = false;
-            // 
-            // lswData
-            // 
-            this.lswData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ID,
-            this.Ad,
-            this.Soyad,
-            this.Şehir,
-            this.columnHeader1});
-            this.lswData.HideSelection = false;
-            this.lswData.Location = new System.Drawing.Point(2, 12);
-            this.lswData.Name = "lswData";
-            this.lswData.Size = new System.Drawing.Size(457, 400);
-            this.lswData.TabIndex = 1;
-            this.lswData.UseCompatibleStateImageBehavior = false;
-            this.lswData.View = System.Windows.Forms.View.Details;
-            // 
-            // ID
-            // 
-            this.ID.Text = "ID";
-            this.ID.Width = 42;
-            // 
-            // Ad
-            // 
-            this.Ad.Text = "Ad";
-            this.Ad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Ad.Width = 93;
-            // 
-            // Soyad
-            // 
-            this.Soyad.Text = "Soyad";
-            this.Soyad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Soyad.Width = 97;
-            // 
-            // Şehir
-            // 
-            this.Şehir.Text = "Şehir";
-            this.Şehir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Şehir.Width = 95;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Telefon";
-            this.columnHeader1.Width = 126;
+            this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
             // 
             // btnYenile
             // 
             this.btnYenile.BackColor = System.Drawing.Color.Thistle;
             this.btnYenile.ForeColor = System.Drawing.Color.Black;
-            this.btnYenile.Location = new System.Drawing.Point(623, 371);
+            this.btnYenile.Location = new System.Drawing.Point(550, 367);
             this.btnYenile.Name = "btnYenile";
             this.btnYenile.Size = new System.Drawing.Size(75, 41);
             this.btnYenile.TabIndex = 14;
             this.btnYenile.Text = "YENİLE";
             this.btnYenile.UseVisualStyleBackColor = false;
+            this.btnYenile.Click += new System.EventHandler(this.btnYenile_Click);
             // 
-            // btnData
+            // dgvData
             // 
-            this.btnData.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnData.ForeColor = System.Drawing.Color.Black;
-            this.btnData.Location = new System.Drawing.Point(488, 371);
-            this.btnData.Name = "btnData";
-            this.btnData.Size = new System.Drawing.Size(75, 41);
-            this.btnData.TabIndex = 15;
-            this.btnData.Text = "REHBER";
-            this.btnData.UseVisualStyleBackColor = false;
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.Location = new System.Drawing.Point(12, 12);
+            this.dgvData.Name = "dgvData";
+            this.dgvData.Size = new System.Drawing.Size(447, 353);
+            this.dgvData.TabIndex = 16;
             // 
             // Form1
             // 
@@ -517,9 +504,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(720, 430);
-            this.Controls.Add(this.btnData);
+            this.Controls.Add(this.dgvData);
             this.Controls.Add(this.tabRehber);
-            this.Controls.Add(this.lswData);
             this.Controls.Add(this.btnYenile);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -531,6 +517,7 @@
             this.tabAra.PerformLayout();
             this.tabGuncelle.ResumeLayout(false);
             this.tabGuncelle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -539,10 +526,6 @@
 
         private System.Windows.Forms.TabControl tabRehber;
         private System.Windows.Forms.TabPage tabEkle;
-        private System.Windows.Forms.ListView lswData;
-        private System.Windows.Forms.ColumnHeader ID;
-        private System.Windows.Forms.ColumnHeader Ad;
-        private System.Windows.Forms.ColumnHeader Soyad;
         private System.Windows.Forms.TabPage tabAra;
         private System.Windows.Forms.TabPage tabGuncelle;
         private System.Windows.Forms.TextBox txtETelefon;
@@ -555,19 +538,17 @@
         private System.Windows.Forms.Label lblSehir;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ColumnHeader Şehir;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnAra;
         private System.Windows.Forms.TextBox txtATelefon;
         private System.Windows.Forms.TextBox txtASoyad;
-        private System.Windows.Forms.TextBox txtAAra;
+        private System.Windows.Forms.TextBox txtAAd;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnGüncelle;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.TextBox txtASehir;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtGSehir;
@@ -581,7 +562,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.CheckBox cbxSil;
-        private System.Windows.Forms.Button btnData;
+        private System.Windows.Forms.DataGridView dgvData;
+        private System.Windows.Forms.TextBox txtİkinciAd;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnGetir;
     }
 }
 

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RehberDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Kisi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adı" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Soyadı" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="İkinci_Ad" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="Şehir" Type="Int32" Nullable="false" />
+    <Property Name="Telefon" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Sehir" Relationship="Self.FK_Kisi_Sehir" FromRole="Kisi" ToRole="Sehir" />
+  </EntityType>
+  <EntityType Name="Sehir">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Şehir" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Kisis" Relationship="Self.FK_Kisi_Sehir" FromRole="Sehir" ToRole="Kisi" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Kisi_Sehir">
+    <End Role="Sehir" Type="Self.Sehir" Multiplicity="1" />
+    <End Role="Kisi" Type="Self.Kisi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sehir">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Kisi">
+        <PropertyRef Name="Şehir" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RehberDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Kisis" EntityType="Self.Kisi" />
+    <EntitySet Name="Sehirs" EntityType="Self.Sehir" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_Kisi_Sehir" Association="Self.FK_Kisi_Sehir">
+      <End Role="Sehir" EntitySet="Sehirs" />
+      <End Role="Kisi" EntitySet="Kisis" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
