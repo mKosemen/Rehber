@@ -97,7 +97,24 @@ namespace PersonelDB
         {
             if (cbxSil.Checked)
             {
-                MessageBox.Show("Sildim sildim hade sildim...:)");
+                if (txtGID.Text != "")
+                {
+                    Kisi kisi = db_.Kisis.Find(Convert.ToInt32(txtGID.Text));
+                    if (kisi != null)
+                    {
+                        db_.Kisis.Remove(kisi);
+                        db_.SaveChanges();
+                        MessageBox.Show("Sildim sildim hade sildim...:)");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kayıt bulunamadı.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Kayıt seçilmedi");
+                }
             }
             else
             {
@@ -115,21 +132,21 @@ namespace PersonelDB
 
         private void btnGetir_Click(object sender, EventArgs e)
         {
-            btnGüncelle.Enabled = true;
+
             Kisi kisi = db_.Kisis.Find(Convert.ToInt32(txtGID.Text));
-            if (kisi!=null)
+            if (kisi != null)
             {
                 txtGAd.Text = kisi.Adı;
                 txtİkinciAd.Text = kisi.İkinci_Ad;
                 txtGSoyad.Text = kisi.Soyadı;
                 txtGSehir.Text = kisi.Şehir.ToString();
                 txtGTelefon.Text = kisi.Telefon;
+                btnGüncelle.Enabled = true;
             }
             else
             {
                 MessageBox.Show("Kayıt bulunamadı.");
             }
-            
         }
 
         private void btnYenile_Click(object sender, EventArgs e)

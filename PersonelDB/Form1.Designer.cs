@@ -85,7 +85,7 @@
             this.tabRehber.Location = new System.Drawing.Point(465, 12);
             this.tabRehber.Name = "tabRehber";
             this.tabRehber.SelectedIndex = 0;
-            this.tabRehber.Size = new System.Drawing.Size(253, 353);
+            this.tabRehber.Size = new System.Drawing.Size(253, 322);
             this.tabRehber.TabIndex = 0;
             // 
             // tabEkle
@@ -105,7 +105,7 @@
             this.tabEkle.Location = new System.Drawing.Point(4, 22);
             this.tabEkle.Name = "tabEkle";
             this.tabEkle.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEkle.Size = new System.Drawing.Size(245, 327);
+            this.tabEkle.Size = new System.Drawing.Size(245, 282);
             this.tabEkle.TabIndex = 0;
             this.tabEkle.Text = "Kişi Kayıt";
             // 
@@ -130,7 +130,7 @@
             // 
             this.btnEkle.BackColor = System.Drawing.Color.IndianRed;
             this.btnEkle.ForeColor = System.Drawing.Color.Black;
-            this.btnEkle.Location = new System.Drawing.Point(81, 280);
+            this.btnEkle.Location = new System.Drawing.Point(81, 234);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(87, 41);
             this.btnEkle.TabIndex = 15;
@@ -206,7 +206,7 @@
             this.tabAra.Location = new System.Drawing.Point(4, 22);
             this.tabAra.Name = "tabAra";
             this.tabAra.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAra.Size = new System.Drawing.Size(245, 327);
+            this.tabAra.Size = new System.Drawing.Size(245, 282);
             this.tabAra.TabIndex = 1;
             this.tabAra.Text = "Arama";
             // 
@@ -248,7 +248,7 @@
             // 
             this.btnAra.BackColor = System.Drawing.Color.Sienna;
             this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAra.Location = new System.Drawing.Point(90, 252);
+            this.btnAra.Location = new System.Drawing.Point(85, 235);
             this.btnAra.Name = "btnAra";
             this.btnAra.Size = new System.Drawing.Size(87, 41);
             this.btnAra.TabIndex = 24;
@@ -328,7 +328,7 @@
             this.tabGuncelle.Controls.Add(this.btnGüncelle);
             this.tabGuncelle.Location = new System.Drawing.Point(4, 22);
             this.tabGuncelle.Name = "tabGuncelle";
-            this.tabGuncelle.Size = new System.Drawing.Size(245, 327);
+            this.tabGuncelle.Size = new System.Drawing.Size(245, 296);
             this.tabGuncelle.TabIndex = 2;
             this.tabGuncelle.Text = "Güncelleme";
             // 
@@ -336,7 +336,7 @@
             // 
             this.btnGetir.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnGetir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGetir.Location = new System.Drawing.Point(19, 258);
+            this.btnGetir.Location = new System.Drawing.Point(19, 242);
             this.btnGetir.Name = "btnGetir";
             this.btnGetir.Size = new System.Drawing.Size(89, 44);
             this.btnGetir.TabIndex = 42;
@@ -470,7 +470,7 @@
             // 
             this.btnGüncelle.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnGüncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGüncelle.Location = new System.Drawing.Point(140, 258);
+            this.btnGüncelle.Location = new System.Drawing.Point(140, 242);
             this.btnGüncelle.Name = "btnGüncelle";
             this.btnGüncelle.Size = new System.Drawing.Size(89, 44);
             this.btnGüncelle.TabIndex = 23;
@@ -482,7 +482,7 @@
             // 
             this.btnYenile.BackColor = System.Drawing.Color.Thistle;
             this.btnYenile.ForeColor = System.Drawing.Color.Black;
-            this.btnYenile.Location = new System.Drawing.Point(550, 367);
+            this.btnYenile.Location = new System.Drawing.Point(551, 336);
             this.btnYenile.Name = "btnYenile";
             this.btnYenile.Size = new System.Drawing.Size(75, 41);
             this.btnYenile.TabIndex = 14;
@@ -495,7 +495,7 @@
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Location = new System.Drawing.Point(12, 12);
             this.dgvData.Name = "dgvData";
-            this.dgvData.Size = new System.Drawing.Size(447, 353);
+            this.dgvData.Size = new System.Drawing.Size(447, 365);
             this.dgvData.TabIndex = 16;
             // 
             // Form1
@@ -503,7 +503,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(720, 430);
+            this.ClientSize = new System.Drawing.Size(720, 385);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.tabRehber);
             this.Controls.Add(this.btnYenile);
